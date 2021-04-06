@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- coinmarket api key 7e0200bc-589b-4437-a25a-eccf9a3ba2ef -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/style/index.css">
+    <link rel="stylesheet" type="text/css" href="static/style/menubar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <title>Cryptometer</title>
+    <meta name="page" content="home">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="static/js/chart.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
+
+    <div class="container-fluid">
+      <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+          <div class="title">Crytometer</div>
+          <ul class="list-items">
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/5851765b451fd1751ae14f04b757d705ca2063363d9cf1862a43b232459980d02decc4b0a808878d709ab0fd5e6b412b729ab45023e82a3bb84a538b1d627950/asset_icons/f92381b195b873a742bbb2be13714f56644b7481d3b2384e407c730b27f42f45.png"></i>Ankr</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/e785e0181f1a23a30d9476038d9be91e9f6c63959b538eabbc51a1abc8898940383291eede695c3b8dfaa1829a9b57f5a2d0a16b0523580346c6b8fab67af14b/asset_icons/b57ac673f06a4b0338a596817eb0a50ce16e2059f327dc117744449a47915cb2.png"></i>Bitcoin</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/80ecca848cf8063ef116820f40917d9afa6e4539db7915864261c1b15d88038959578a046de6c043afbbc2bc57add006fec9cda135c1d7f9e15abd0ada922226/asset_icons/fad98159f8fc5dea07c6b76b69bee91f38383053504603c7d0e0cfed156fb79f.png"/>Btt</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/da39dfe3632bf7a9c26b5aff94fe72bc1a70850bc488e0c4d68ab3cf87ddac277cd1561427b94acb4b3e37479a1f73f1c37ed311c11a742d6edf512672aea7bb/asset_icons/a55046bc53c5de686bf82a2d9d280b006bd8d2aa1f3bbb4eba28f0c69c7597da.png"/>Cardano</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/9e34c547e363744ad9e5d140d098f498ee8959a2c175366765beb000c24695712697b3aa8d972e75e4d6c79a5c16e496a78fe30094638b1ad5fea45db71c82df/asset_icons/351b8b5f92576806a20692c98ae00c4d930117e44b26f217ab2bef5b29b3e312.png"/>Chainlink</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/b92276a1f003b87191983dab71970a9a6d522dde514176e5880a75055af1e67ce5f153b96a2ee5ecd22729a73d3a8739b248d853bde74ab6e643bef2d1b4f88d/asset_icons/9c760bf25bca9823f9ef8d651681b779aadc71a2f543f931070034e59ef10120.png"/>Cosmos</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/e0e4a3520fda10f3955134f55373dbe6f74d286dcc0a7473586f950bdd7ed6db4aa97f89ae79858fb099f41f7136ed679549aa69f3f72e85433a0dce58831378/asset_icons/ef7c6e37d8cb47adc33193e086c8d8e1a01ad7c5666cec3f6484a3e3560da9db.png"/>Decentraland</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/dbb4b4983bde81309ddab83eb598358eb44375b930b94687ebe38bc22e52c3b2125258ffb8477a5ef22e33d6bd72e32a506c391caa13af64c00e46613c3e5806/asset_icons/4113b082d21cc5fab17fc8f2d19fb996165bcce635e6900f7fc2d57c4ef33ae9.png"/>Etherium</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/a5374e6fa4d5fd4478f9aa0b1e19d382169065aa77436938be73107f60c154619e4535126f4497db58d920258cd2fdc0c4b473c1aaa9bd2235feb4050e75e102/asset_icons/e9bf89a0de2f6d4cb6bb0c466635d5b04859c169b60adc527c9d75bb98dc78f5.png"/>Harmony</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/f018870b721574ef7f269b9fd91b36042dc05ebed4ae9dcdc340a1bae5b359e8760a8c224bc99466db704d10a3e23cf1f4cd1ff6f647340c4c9c899a9e6595cd/asset_icons/984a4fe2ba5b2c325c06e4c2f3ba3f1c1fef1f157edb3b8ebbfe234340a157a5.png"/>Litecoin</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/a1e067b31dd17dcb4b4e2ca2e1d69bdf7108e1ecb0a1c7bffbf32aeacadd7bf5da3353cb1fe183011facf425056194dfe3168dc5307d5c57f8b1ab6cf0b170ba/asset_icons/442f265841000bf300cbff85f4d9e8525ea3aeb8bb8586da17da9cac010c79c5.png"/>Omi</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/085ce26e1eba2ccb210ea85df739a0ca2ef782747e47d618c64e92b168b94512df469956de1b667d93b2aa05ce77947e7bf1b4e0c7276371aa88ef9406036166/asset_icons/57f28803aad363f419a950a5f5b99acfd4fba8b683c01b9450baab43c9fa97ea.png"/>Polygon</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/ddaf9d27a2388105c5568c68ebe4078d057efac1cb9b091af6a57f4d187cf06b2701b95f75bd148d3872df32b69ebb678de71a42da317370aaec7d6448bda379/asset_icons/80782fe2d690f299e7f5bb9b89af87e1db75769e59c14fa0257054c962401805.png"/>Stellar Lumens</a></li>
+            <li><a href="#"><img src="https://dynamic-assets.coinbase.com/0ad9feddd1edfda57c5ee772f241bf8a1b5c78c8d90da7acf5281718d67e121f9d8934e6a796cfc9d7693da2e188926b40bba5a25f9802fb2350bb5af2ff2c2c/asset_icons/2163bda6b530aca9b138244a21abf50f87626beb0605fc5fd492d0dc0eb04143.png"/>Vechain</a></li>
+            <!--
+            <div class="icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            -->
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+          <div class="header">Animated Side Navigation Menu</div>
+          <p> using only HTML and CSS</p>
+      </div>
+    </div>
+
+  </body>
+</html>
