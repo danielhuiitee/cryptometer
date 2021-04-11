@@ -1,0 +1,5 @@
+Flask==1.1.1
+flask_cors==3.0.8
+flask_uploads==0.2.1
+flask_sqlalchemy==2.5.1
+gunicorn==19.6.0

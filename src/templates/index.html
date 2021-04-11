@@ -7,15 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="static/style/index.css">
-    <link rel="stylesheet" type="text/css" href="static/style/menubar.css">
+    <link rel="stylesheet" type="text/css" href="/public/style/index.css">
+    <link rel="stylesheet" type="text/css" href="/public/style/menubar.css">
+    <link rel="stylesheet" type="text/css" href="/public/style/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     <title>Cryptometer</title>
     <meta name="page" content="home">
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="static/js/chart.js"></script>
+
 
   </head>
   <body>
@@ -39,6 +40,7 @@
         <nav id="sidebar">
           <div class="title">Crytometer</div>
           <ul class="list-items">
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="#"><img src="https://dynamic-assets.coinbase.com/5851765b451fd1751ae14f04b757d705ca2063363d9cf1862a43b232459980d02decc4b0a808878d709ab0fd5e6b412b729ab45023e82a3bb84a538b1d627950/asset_icons/f92381b195b873a742bbb2be13714f56644b7481d3b2384e407c730b27f42f45.png"></i>Ankr</a></li>
             <li><a href="#"><img src="https://dynamic-assets.coinbase.com/e785e0181f1a23a30d9476038d9be91e9f6c63959b538eabbc51a1abc8898940383291eede695c3b8dfaa1829a9b57f5a2d0a16b0523580346c6b8fab67af14b/asset_icons/b57ac673f06a4b0338a596817eb0a50ce16e2059f327dc117744449a47915cb2.png"></i>Bitcoin</a></li>
             <li><a href="#"><img src="https://dynamic-assets.coinbase.com/80ecca848cf8063ef116820f40917d9afa6e4539db7915864261c1b15d88038959578a046de6c043afbbc2bc57add006fec9cda135c1d7f9e15abd0ada922226/asset_icons/fad98159f8fc5dea07c6b76b69bee91f38383053504603c7d0e0cfed156fb79f.png"/>Btt</a></li>
@@ -65,10 +67,83 @@
         </nav>
       </div>
       <div class="content">
+          
+          <button type="button" id="transaction-modal-btn" class="btn btn-outline-primary">Add Transaction</button>
+
+<!--
           <div class="header">Animated Side Navigation Menu</div>
           <p> using only HTML and CSS</p>
+          <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgModalCurr">
+            <div id="caption"></div>
+          </div>
+-->
+          <div class="modal" id="transaction-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <select class="custom-select" required>
+                        <option value="ANKR">Ankr</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="BTT">Bittorrent</option>
+                        <option value="CRO">Crypto.com</option>
+                        <option value="ATOM">Cosmos</option>
+                        <option value="ADA">Cardano</option>
+                        <option value="LINK">Chainklink</option>
+                        <option value="MANA">Decentraland</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="OMI">Ecomi</option>
+                        <option value="ONE">Harmony One</option>
+                        <option value="LTC">Litecoin</option>
+                        <option value="MATIC">Polygon</option>
+                        <option value="XLM">Stellar Lumens</option>
+                        <option value="VET">Vechain</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <select class="custom-select" required>
+                        <option value="buy">Buy</option>
+                        <option value="sell">Sell</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Date</label><input type="text" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-yyyy">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Amount</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="$">
+                    </div>
+                     <div class="form-group">
+                      <label for="exampleInputPassword1">Cost</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cost of coin at time of purchase (Optional)">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Apply</button>
+                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
       </div>
     </div>
+
+
+    <script type="text/javascript" src="/public/js/chart.js"></script>
+    <script type="text/javascript" src="/public/js/index.js"></script>
 
   </body>
 </html>
