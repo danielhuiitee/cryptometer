@@ -70,68 +70,67 @@
           
           <button type="button" id="transaction-modal-btn" class="btn btn-outline-primary">Add Transaction</button>
 
-<!--
-          <div class="header">Animated Side Navigation Menu</div>
-          <p> using only HTML and CSS</p>
-          <div id="imgModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="imgModalCurr">
-            <div id="caption"></div>
-          </div>
--->
+
           <div class="modal" id="transaction-modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <h5 class="modal-title">New Transaction</h5>
                 </div>
 
                 <div class="modal-body">
-                  <form>
+                  <form id="transaction-form" action="/new-transaction" method="post"> 
+
+                    <div class="row">
+                      <div class="col">
+                        <select name="method" class="custom-select" required>
+                          <option value="buy">Buy</option>
+                          <option value="sell">Sell</option>
+                          <option value="sell">Trade</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select name="crypto" class="custom-select" required>
+                          <option value="ANKR">Ankr</option>
+                          <option value="BTC">Bitcoin</option>
+                          <option value="BTT">Bittorrent</option>
+                          <option value="CRO">Crypto.com</option>
+                          <option value="ATOM">Cosmos</option>
+                          <option value="ADA">Cardano</option>
+                          <option value="LINK">Chainklink</option>
+                          <option value="MANA">Decentraland</option>
+                          <option value="ETH">Ethereum</option>
+                          <option value="OMI">Ecomi</option>
+                          <option value="ONE">Harmony One</option>
+                          <option value="LTC">Litecoin</option>
+                          <option value="MATIC">Polygon</option>
+                          <option value="XLM">Stellar Lumens</option>
+                          <option value="VET">Vechain</option>
+                        </select>
+                      </div>
+                    </div>
+                    <br/>
                     <div class="form-group">
-                      <select class="custom-select" required>
-                        <option value="ANKR">Ankr</option>
-                        <option value="BTC">Bitcoin</option>
-                        <option value="BTT">Bittorrent</option>
-                        <option value="CRO">Crypto.com</option>
-                        <option value="ATOM">Cosmos</option>
-                        <option value="ADA">Cardano</option>
-                        <option value="LINK">Chainklink</option>
-                        <option value="MANA">Decentraland</option>
-                        <option value="ETH">Ethereum</option>
-                        <option value="OMI">Ecomi</option>
-                        <option value="ONE">Harmony One</option>
-                        <option value="LTC">Litecoin</option>
-                        <option value="MATIC">Polygon</option>
-                        <option value="XLM">Stellar Lumens</option>
-                        <option value="VET">Vechain</option>
-                      </select>
+                        <select name="exchange" class="custom-select" required>
+                          <option value="bitforex">Bitforex</option>
+                          <option value="coinbase">Coinbase</option>
+                          <option value="crypto.com">Crypto.com</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                      <select class="custom-select" required>
-                        <option value="buy">Buy</option>
-                        <option value="sell">Sell</option>
-                      </select>
+                      <label for="exampleInputPassword1">Date:</label><input name="date" type="text" class="form-control" id="exampleInputPassword1" placeholder="unix timestamp">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Date</label><input type="text" class="form-control" id="exampleInputPassword1" placeholder="dd-mm-yyyy">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Amount</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="$">
+                      <label for="exampleInputPassword1">Number of coins bought/sold:</label>
+                      <input name="num_coins" type="text" class="form-control" id="exampleInputPassword1" placeholder="0">
                     </div>
                      <div class="form-group">
-                      <label for="exampleInputPassword1">Cost</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Cost of coin at time of purchase (Optional)">
+                      <label for="exampleInputPassword1">Cost:</label>
+                      <input name="cost" type="text" class="form-control" id="exampleInputPassword1" placeholder="Cost of coin at time of purchase">
                     </div>
+                    <input type="submit" id="submitForm" class="btn btn-primary" value="Submit">
+                    <button type="button" class="close-modal btn btn-secondary">Close</button>
                   </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Apply</button>
-                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -143,7 +142,7 @@
 
 
     <script type="text/javascript" src="/public/js/chart.js"></script>
-    <script type="text/javascript" src="/public/js/index.js"></script>
+    <script type="text/javascript" src="/public/js/modal.js"></script>
 
   </body>
 </html>

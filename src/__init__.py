@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+import os 
+
 
 app = Flask(__name__, 
 			template_folder="./templates",
@@ -7,5 +9,10 @@ app = Flask(__name__,
 			static_folder="../public"
 			)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/sqlite.db'
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db/sqlite.db')
 db = SQLAlchemy(app)	
+
+
+
